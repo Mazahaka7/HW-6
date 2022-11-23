@@ -99,7 +99,7 @@ h2{
     background-color: #FF00FF;
     border: 1px solid #FF00FF;
     content: url(../images/icon2.svg);
-    align-items: center;
+    padding-left: .3em;
 }
 
 /* Background images for input */
