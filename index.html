@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="information">
+        <h1>Intake Main Flow</h1>
+        <p>
+          <span class="red">*</span>
+          Mandatory field
+        </p>
+        <form action="">
+          <h2>Information</h2>
+          <div class="form_flex">
+            <!--First column-->
+            <div class="first_column">
+              <div>
+                <label for="type"
+                  >Intake Type
+                  <span class="red">* (select)</span>
+                </label>
+                <select id="inataketype" required>
+                  <option value="">Referral</option>
+                  <option value="">Standart</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="phone">phone</label>
+                <input type="tel" id="phone" />
+              </div>
+
+              <div>
+                <label for="mail">email</label>
+                <input id="mail" type="email" />
+              </div>
+
+              <div>
+                <label for="registration_app"
+                  >Application Registration (Optional)</label
+                >
+                <select id="registration_app">
+                  <option value="">APP0000116</option>
+                  <option value="">APP0101016</option>
+                </select>
+              </div>
+              <div>
+                <label for="additional_date"
+                  >Additional Information Requested Date (Optional)</label
+                >
+                <input id="additional_date" type="date" value="2021-12-05" />
+              </div>
+              <div>
+                <label for="days"
+                  >Remaining Days Before Referral is Purged (Optional)</label
+                >
+                <input type="number" id="days" min="1" max="30" value="13" />
+              </div>
+              <div>
+                <label for="paymentdate">Fee Payment Date (Optional)</label>
+                <input type="date" id="paymentdate" value="2021-12-05" />
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="application"
+                  checked
+                  class="check-app"
+                />
+                <lable class="check-label" for="application"
+                  >Application Fee Processed</lable
+                >
+              </div>
+            </div>
+            <!--Second column-->
+            <div class="second_column">
+              <div>
+                <label for="date">Enrollment Initiation Date jquery</label>
+                <input
+                  id="date"
+                  type="date"
+                  value="2021-11-05"
+                  pattern=""
+                  disabled
+                  class="calendar"
+                />
+              </div>
+              <div>
+                <label for="category_select"
+                  >Application Category
+                  <span class="red">*</span>
+                </label>
+                <select id="category_select" required>
+                  <option value="1">Child Support</option>
+                  <option value="2">Adult Support</option>
+                </select>
+              </div>
+              <div>
+                <label for="subdate"
+                  >Enrollment Submission Date (Optional)</label
+                >
+                <input
+                  id="subdate"
+                  type="date"
+                  value="2021-11-05"
+                  disabled
+                  class="calendar"
+                />
+              </div>
+              <div class="checkbox">
+                <label class="checkbox-label" for="check">Purged</label>
+                <input id="check" type="checkbox" value="Purged" />
+              </div>
+              <div>
+                <label for="paternity"
+                  >Exempt from Paternity (Optional) (select)</label
+                >
+                <select id="paternity">
+                  <option value="No">No</option>
+                  <option value="Yes">Yes</option>
+                </select>
+              </div>
+              <div>
+                <label for="status">Enrollment Status (Optional)</label>
+                <input
+                  type="text"
+                  placeholder="Worklisted"
+                  id="status"
+                  readonly
+                  class="non-active"
+                />
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+      <!--Section Maternity Information-->
+      <section class="maternity">
+        <hr />
+        <h2 class="materiny-heading">Maternity Information</h2>
+        <div class="maternity_flex">
+          <div>
+            <label class="checkbox-label" for="check2"
+              >Are you requesting child support services for anunborn
+              child?</label
+            >
+            <input type="checkbox" id="check2" />
+          </div>
+          <div>
+            <label for="bioparents"
+              >Other known biological parent? (Optional)</label
+            >
+            <input
+              type="text"
+              placeholder="None"
+              id="bioparents"
+              readonly
+              class="non-active"
+            />
+          </div>
+        </div>
+      </section>
+      <!--Oficial use-->
+      <section class="official">
+        <hr />
+        <h2 class="official-heading">Official Use</h2>
+        <div class="official_flex">
+          <div>
+            <div>
+              <label for="category">Case Category (select)</label>
+              <select id="category">
+                <option value="IV-A" selected>Active IV-A</option>
+                <option value="V-B">Active V-B</option>
+              </select>
+            </div>
+            <div>
+              <label for="arrearsindicator"
+                >Arrears Only Indicator (Optional)</label
+              >
+              <input
+                type="text"
+                placeholder="None"
+                id="arrearsindicator"
+                class="non-active"
+              />
+            </div>
+            <div>
+              <label for="ownership"
+                >Assigned County of Ownership (Optional)</label
+              >
+              <input
+                type="text"
+                placeholder="None"
+                id="countryownership"
+                class="non-active"
+              />
+            </div>
+            <div>
+              <label for="casestatus"
+                >Intergovermental Case Status (details)</label
+              >
+              <input
+                type="text"
+                placeholder="None"
+                id="casestatus"
+                class="non-active"
+              />
+            </div>
+            <div>
+              <label for="specialindicator"
+                >Special Handling Indicator for Applicant (Optional)</label
+              >
+              <input
+                type="text"
+                placeholder="None"
+                id="specialindicator"
+                class="non-active"
+              />
+            </div>
+            <div>
+              <label for="specialindicator2"
+                >Special Handling Indicator for Other Parent(Optional)</label
+              >
+              <input
+                type="text"
+                placeholder="None"
+                id="specialindicator2"
+                class="non-active"
+              />
+            </div>
+          </div>
+          <div>
+            <div>
+              <label for=""
+                >IV-D Indicator
+                <span class="red">*</span>
+              </label>
+              <select id="category" required>
+                <option value="IV-D" selected>Non-IV-D</option>
+                <option value="V-E">Non-V-E</option>
+              </select>
+            </div>
+            <div>
+              <label for="casecategory"
+                >Intergovernmental Case Category (Optional)</label
+              >
+              <input
+                type="text"
+                placeholder="None"
+                id="casecategory"
+                readonly
+                class="non-active"
+              />
+            </div>
+            <div>
+              <label for="casetype"
+                >Intergovernmental Case Type (Optional)</label
+              >
+              <input
+                type="text"
+                placeholder="None"
+                readony
+                id="casetypoe"
+                class="non-active"
+              />
+            </div>
+            <div>
+              <label for="casenumber">Case Number</label>
+              <input
+                type="text"
+                placeholder="None"
+                readonly
+                id="casenumber"
+                class="search"
+              />
+            </div>
+            <div>
+              <label for="referralnumb">Referral Number</label>
+              <input
+                type="text"
+                placeholder="None"
+                readonly
+                id="referralnumb"
+                class="search"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Sys information-->
+      <section class="system_information">
+        <hr />
+        <h2>System Information</h2>
+        <div class="system_information_flex">
+          <div>
+            <div>
+              <label for="enrollment">Enrollment Taken by User </label>
+              <input
+                type="search"
+                placeholder="Search Input"
+                id="enrollment"
+                class="search"
+              />
+            </div>
+            <div>
+              <label for="worker">Worker (Optional)</label>
+              <input
+                type="search"
+                placeholder="Search Input"
+                id="worker"
+                class="search"
+              />
+            </div>
+          </div>
+          <div>
+            <div>
+              <label for="supervisor">Intake Supervisor (Optional)</label>
+              <input
+                type="search"
+                placeholder="Search"
+                id="supervisor"
+                class="search"
+              />
+            </div>
+            <div>
+              <label for="owner">Owner (Optional)</label>
+              <input
+                type="search"
+                value="Rajaneesh Banal"
+                id="owner"
+                class="search"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="button">
+          <hr />
+          <label for=""></label>
+          <input type="submit" id="submit_btn" value="Next" />
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
