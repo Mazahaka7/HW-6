@@ -75,22 +75,6 @@ h2{
     margin-top: 135px;
 }
 
-/* Checkbox checked styles */
-/* input.check-app[type='checkbox'] {
-    display: none;
-}
-.check-app + .check-label > span.radio{
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    border: 1px solid black;
-    border-radius: 3px;
-    cursor: pointer;
-    background-color: #fff;
-}
-input.check-app[type='checkbox']:checked + .check-label > span.radio{
-    background-color: #FF00FF;
-} */
 .apllication{
     display:flex;
     flex-direction: row-reverse;
