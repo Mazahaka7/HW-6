@@ -77,15 +77,16 @@
                 <input type="date" id="paymentdate" value="2021-12-05" />
               </div>
               <div class="apllication_processed">
-                <input
-                  type="checkbox"
-                  id="application"
-                  checked
-                  class="checkbox-input"
-                />
                 <lable class="checkbox-label" for="application"
-                  >Application Fee Processed</lable
-                >
+                  >Application Fee Processed
+                  <input
+                    type="checkbox"
+                    id="application"
+                    checked
+                    class="checkbox-input"
+                  />
+                  <span class="check"></span>
+                </lable>
               </div>
             </div>
             <!--Second column-->
@@ -124,8 +125,11 @@
                 />
               </div>
               <div class="checkbox-center">
-                <input id="check" type="checkbox" class="checkbox-input" />
-                <label class="checkbox-label" for="check">Purged</label>
+                <label class="checkbox-label" for="check"
+                  >Purged
+                  <input id="check" type="checkbox" class="checkbox-input" />
+                  <span class="check"></span>
+                </label>
               </div>
               <div>
                 <label for="paternity"
@@ -156,11 +160,11 @@
         <h2 class="materiny-heading">Maternity Information</h2>
         <div class="maternity_flex">
           <div>
-            <input type="checkbox" id="check2" class="checkbox-input" />
             <label class="checkbox-label" for="check2"
-              >Are you requesting child support services for anunborn
-              child?</label
-            >
+              >Are you requesting child support services for anunborn child?
+              <input type="checkbox" id="check2" class="checkbox-input" />
+              <span class="check"></span>
+            </label>
           </div>
           <div>
             <label for="bioparents"
