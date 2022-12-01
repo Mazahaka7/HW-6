@@ -63,10 +63,6 @@ h2{
     justify-content: flex-start;
 }
 .checkbox-center{
-    /* display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    align-items: center; */
     padding-top: 135px;
 }
 
